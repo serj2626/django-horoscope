@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{#{% block style %}#}
+{#    <link rel="stylesheet" href="{% static 'zodiac/css/elements.css' %}">#}
+{#{% endblock %}#}
+
+{% block title %}{{ title }}{% endblock %}
+
+
+{% block content %}
+    <div class="text-header">
+        <h1 class="text-light"><span class="first-let">Стихии</span></h1>
+        <hr>
+    </div>
+
+    <ul class="list-group">
+        {% for el in object_list %}
+            <li><a href="{{ el.get_absolute_url }}"><img class="images" src="{{ el.image.url }}" alt=""></a></li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
+
+{% block aside %}
+    <div class="col-md-3">
+
+        <div class="news mt-5 mx-5">
+            <p class="text-light text-center"> Планеты</p>
+            <img class="w-100" src="{% static 'zodiac/img/planet.jpg' %}"
+                 alt="">
+
+            <a class="text-decoration-none" target="_blank" href=""><p class="text-light text-center">Читать</p></a>
+        </div>
+
+
+        <div class="news mt-5 mx-5 ">
+            <p class="text-light text-center"> Стихии</p>
+            <img class="w-100 " src="{% static 'zodiac/img/elements.jpg' %}"
+                 alt="">
+
+            <a class="text-decoration-none" target="_blank" href=""><p class="text-light text-center">Читать</p></a>
+        </div>
+
+    </div>
+{% endblock %}

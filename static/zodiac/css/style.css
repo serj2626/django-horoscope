@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/signs_zodiac.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
+.title h1 {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fafafa;
+}
+
+.title span {
+    color: rgb(148, 58, 187);
+}
+
+
+.list_menu {
+    margin-bottom: 50px;
+}
+
+.list_menu a {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #fafafa;
+    border-left: 2px solid #fafafa;
+    padding-left: 5px;
+    transition: all 0.2s ease;
+}
+
+.list_menu a:hover {
+    border-left: 2px solid rgb(148, 58, 187);
+    padding-left: 10px;
+    transition: all 0.2s ease;
+}
+
+.menu:hover {
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+
+.list_menu li {
+    margin: 25px 0;
+}
+
+
+.menu {
+    padding: 25vh 50px;
+    position: fixed;
+    background-color: rgba(37, 28, 74, 0.5);
+    height: 100vh;
+    backdrop-filter: blur(16px);
+    border-right: 5px solid #fafafa;
+    left: -330px;
+}
+
+
+
+.footer_menu p {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #fafafa;
+}
+
+
+.news {
+
+    background-color: #fafafaaa;
+    border: 1px solid black;
+    border-radius: 2%;
+}
+
+.news img {
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    {% block style %}{% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'zodiac/css/style.css' %}">
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+
+
+        <div class="col-md-3">
+            <div class="menu h-100">
+                <div class="title">
+                    <h1>NAVIGATION</h1>
+                </div>
+                <div class="list_menu">
+                    <ul>
+                        <li><a href="{% url 'zodiac:home' %}">Главная</a></li>
+                        <li><a href="{% url 'zodiac:contacts' %}">Контакты</a></li>
+                        {% if user.is_authenticated %}
+                            <p style="color: #fafafa">Привет, {{ user.username }}</p>
+                            <li class="menu-item-has-children"><a href="{% url 'logout' %}">Выход</a></li>
+                        {% else %}
+                            <li class="menu-item-has-children"><a href="{% url 'signup' %}">Регистрация</a>
+                            </li>
+                            <li class="menu-item-has-children"><a href="{% url 'login' %}">Авторизация</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="footer_menu">
+                    <p>©Boytsov 2023</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 my-5">
+
+            {% block content %}{% endblock %}
+
+        </div>
+
+
+        {% block aside %}{% endblock %}
+
+
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

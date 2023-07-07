@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'zodiac/css/detail.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="detail mt-2">
+        <img src="{{ object.img.url }}" alt="">
+    </div>
+
+    <div class="detail-text">
+        <p class=" text-light">{{ object.description }}</p>
+    </div>
+    <button type="button" class="btn btn-primary">  <a href="{% url 'zodiac:home' %}"><p class=" text-light">На главную</p></a></button>
+
+
+{% endblock %}
+
+
+{% block aside %}
+    <div class="col-md-3">
+
+        <div class="news mt-5 mx-5">
+            <p class="text-light text-center"> История гороскопа</p>
+            <img class="w-100" src="{% static 'zodiac/img/history.jpg' %}"
+                 alt="">
+
+            <a class="text-decoration-none" target="_blank"
+               href="https://www.5-tv.ru/news/257352/istoria-poavlenia-goroskopov-iinteresnye-fakty-oznakah-zodiaka/?ysclid=lieell4wgk120351468">
+                <p class="text-light text-center">Читать</p></a>
+        </div>
+
+
+        <div class="news mt-5 mx-5 ">
+            <p class="text-light text-center"> Совместимость знаков</p>
+            <img class="w-100 " src="{% static 'zodiac/img/sovmes.png' %}"
+                 alt="">
+
+            <a class="text-decoration-none" target="_blank"
+               href="https://horoscopes.rambler.ru/sovmestimost-znakov-zodiaka/?ysclid=lieensanrf185630430"><p
+                    class="text-light text-center">Читать</p></a>
+        </div>
+
+    </div>
+{% endblock %}

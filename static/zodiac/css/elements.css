@@ -1,0 +1,12 @@
+img {
+    height: 110px;
+    width: 110px;
+
+}
+
+ul.list-group li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    border: 1px solid black ;
+    border-radius: 50%;
+}

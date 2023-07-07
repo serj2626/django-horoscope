@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'zodiac/css/contacts.css' %}">{% endblock %}
+{% block title %}Контакты{% endblock %}
+
+
+
+{% block content %}
+
+    <h1 class="text-center text-white">Контакты</h1>
+
+    <div class="d-flex mt-5 flex-row justify-content-center">
+
+        <div class=" contact p-2 flex-fill"> <a title="vk"  href=""><i class="fa-brands  fa-vk fa-2xl" style="color: #ffffff;"></i></a></div>
+
+        <div class="contact p-2 flex-fill"> <a title="telegram" href=""><i class="fa-brands  fa-telegram fa-2xl" style="color: #ffffff;"></i></a></div>
+
+        <div class="contact p-2 flex-fill"> <a title="instagram" href=""><i class="fa-brands  fa-instagram fa-2xl" style="color: #ffffff;"></i></a></div>
+
+        <div class="contact p-2 flex-fill"> <a title="github" href="https://github.com/Serj2626"><i class="fa-brands  fa-github fa-2xl" style="color: #ffffff;"></i></a></div>
+    
+    </div>
+
+{% endblock %}
+
+{% block aside %}
+    <div class="col-md-3">
+
+        <div class="news mt-5 mx-5">
+            <p class="text-light text-center"> Талисманы</p>
+            <img class="w-100" src="{% static 'zodiac/img/contacts/talisman.png' %}"
+                 alt="">
+
+            <a class="text-decoration-none" target="_blank" href="https://v-kosmose.com/znaki-zodiaka/talismanyi-znakov-zodiaka/?ysclid=lieek595fv768239215"><p class="text-light text-center">Читать</p></a>
+        </div>
+
+
+             <div class="news mt-5 mx-5 ">
+            <p class="text-light text-center"> Книга</p>
+            <img class="w-100 " src="{% static 'zodiac/img/contacts/book.png' %}"
+                 alt="">
+
+            <a class="text-decoration-none" target="_blank" href="https://www.universalinternetlibrary.ru/book/gudmen/znaki_zodiaka.shtml?ysclid=lieehpkgd4410337433"><p class="text-light text-center">Читать</p></a>
+        </div>
+
+
+
+    </div>
+{% endblock %}

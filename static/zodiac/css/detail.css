@@ -1,0 +1,12 @@
+.detail img {
+    width: 550px;
+    height: 350px;
+    border-radius: 20%;
+}
+
+
+.detail-text p{
+    font-size: 16px;
+    color: #fafafa;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}

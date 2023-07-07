@@ -1,0 +1,53 @@
+.text-header {
+    font-style: italic;
+    font-size: 26px;
+}
+
+.text-header hr {
+    color: #fafafa;
+    margin: 20px 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-top: 2px solid #ddd;
+	border-bottom: 2px solid #000;
+}
+
+.list-li {
+    font-style: italic;
+
+}
+
+
+.list-sign a {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #fafafa;
+    border-left: 2px solid #fafafa;
+    padding-left: 5px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+
+}
+
+.list-sign li {
+    margin: 2px 0;
+}
+
+.list-sign a:hover {
+    border-left: 2px solid  #ca08ee;
+    border-bottom: 2px solid  #ca08ee;
+    padding: 10px;
+    transition: all 0.2s ease;
+    color: #ca08ee;
+}
+
+.first-let {
+    color: #ca08ee;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+
+.news {
+    border-color: #fafafa;
+}
